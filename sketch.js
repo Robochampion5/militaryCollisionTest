@@ -25,3 +25,12 @@ function draw(){
   }
     drawSprites();
 }
+
+function hasCollided(1bullet,2wall){
+  bulletRightEdge = 1bullet.x + 1bullet.width;
+  wallLeftEdge = 2wall.x;
+  if(bulletRightEdge >= wallLeftEdge){
+    return true;
+  }
+  return false;
+}
